@@ -1,3 +1,4 @@
+
 const menuIcon = document.querySelector(".hamburger-bar");
 const navbar = document.querySelector(".navbar");
 
@@ -19,3 +20,4 @@ home.addEventListener('click', () => {
     container.classList.remove('block');
     secondContainer.classList.remove("appear");
 })
+

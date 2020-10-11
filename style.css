@@ -20,7 +20,7 @@ body {
 .container {
      width: 100%;
      height: 100vh;
-     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) , url(img/bg1.png) center no-repeat;
+     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) , url(img/bg.png) center no-repeat;
      background-size: cover;
      position: relative;
      overflow: hidden;
@@ -70,12 +70,12 @@ body {
     width: 100%;
     height: 100vh;
     /* background-color: #32021eda; */
-    background-color: #360547e7;
+    background-color: #131313f5;
     position: fixed;
     top: 0;
     right: -100%;
     transition: all .5s ease;
-    z-index: 1;
+    z-index: 1000;
 }
 .change {
     right: 0;
@@ -92,11 +92,15 @@ body {
     align-items: center;
     cursor: pointer;
     flex-direction: column;
+    transition: all .5s;
+}
+.hamburger-bar:hover .line {
+  background-color: #feffffe2;
 }
 .line {
     width: 100%;
     height: 3px;
-    background-color: #FCE7BE;
+    background-color: #FEFFFF;
     transition: all .5s ease;
 }
 .change .line1 {
@@ -123,7 +127,7 @@ body {
 }
 .link {
     text-decoration: none;
-    color: #F8A074;
+    color:#64C1B4;
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -132,7 +136,7 @@ body {
     transition: color .5s ease;
 }
 .link:hover {
-    color: #FCE7BE;
+    color:#148D8D;
 }
 .link::before,
 .link::after {
@@ -140,7 +144,7 @@ body {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #FCE7BE;
+    background-color: #18667A;
     left: 0;
     transform: scale(0);
     transition: all .5s ease-in;
@@ -163,8 +167,8 @@ header {
 }
 header h1 {
     text-align: center;
-    color: #FCE7BE;
-    font-size: 80px;
+    color: #FEFFFF;
+    font-size: 50px;
     letter-spacing: 1px;
 }
 #btn {
@@ -173,19 +177,19 @@ header h1 {
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: #F8A074;
+  background-color:#148D8D;
   margin: 20px auto;
   font-size: 18px;
   letter-spacing: 2px;
-  color: #FCE7BE;
+  color: #FEFFFF;
   cursor: pointer;
   transition: all .5s ease-in;
-  text-transform: uppercase;
+  text-transform: capitalize;
   animation: shake .8s ease 1s;
 }
 #btn:hover {
   color: #fff;
-  background-color: #f8a074e2;
+  background-color: #64C1B4;
   font-weight: 500;
 }
 @keyframes shake {
@@ -205,7 +209,7 @@ header h1 {
 footer {
     position: absolute;
     bottom: 80px;
-    right: 20px;
+    right: 10%;
     width: 50%;
 }
 .footer-links {
@@ -232,6 +236,23 @@ footer {
     padding-bottom: 5px;
 }
 
+@media screen and (max-width: 500px) {
+  .logo-wrapper {
+    width: 130px;
+  }
+  header h1 {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+  #btn {
+    padding: 15px 20px;
+  }
+  footer {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
 /* SECOND CONTAINER */
 
 .second-container {
@@ -249,7 +270,7 @@ footer {
 
 .hero {
   background: #000;
-  background: linear-gradient(toright, #161616, #000000);
+  background: linear-gradient(to right, #161616, #000000);
   padding: 200px 0;
 }
 .hero-container {
@@ -271,16 +292,16 @@ footer {
 }
 
 .hero-heading span {
-  background: #ff4b1f; /* fallback for old browsers */
+  background: #64C1B4; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #1fddff,
-    #ff4b1f
+    #148D8D,
+    #64C1B4
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #1fddff,
-    #ff4b1f
+    #148D8D,
+    #64C1B4
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
@@ -291,16 +312,16 @@ footer {
 
 .hero-description {
   font-size: 60px;
-  background: #0099f7; /* fallback for old browsers */
+  background: #FEFFFF; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #f11712,
-    #0099f7
+    #FEFFFF,
+    #E4E5E6
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #f11712,
-    #0099f7
+    #feffff,
+    #E4E5E6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
