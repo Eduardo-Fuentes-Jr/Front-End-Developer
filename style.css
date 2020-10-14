@@ -31,6 +31,18 @@ body {
      transition: all .8s ease-in-out;
      
 }
+.cloud {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  animation: wind 400s infinite;
+
+}
+@keyframes wind {
+  0% {transform: translateX(-50%);}
+  50% {transform: translateX(200%);}
+  100% {transform: translateX(-100%);}
+}
 .block {
   height: 0vh;
   overflow: hidden;
