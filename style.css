@@ -51,7 +51,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    width: 90px;
+    width: 50px;
     z-index: 100;
 }
 .logo-wrapper img {
