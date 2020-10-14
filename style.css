@@ -209,7 +209,7 @@ header h1 {
 footer {
     position: absolute;
     bottom: 80px;
-    right: 10%;
+    right: 10px;
     width: 50%;
 }
 .footer-links {
@@ -246,10 +246,6 @@ footer {
   }
   #btn {
     padding: 15px 20px;
-  }
-  footer {
-    right: 50%;
-    transform: translateX(50%);
   }
 }
 
