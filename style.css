@@ -243,9 +243,6 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  .logo-wrapper {
-    width: 130px;
-  }
   header h1 {
     font-size: 30px;
     letter-spacing: 4px;
