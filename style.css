@@ -175,6 +175,7 @@ header h1 {
     color: #FEFFFF;
     font-size: 50px;
     letter-spacing: 1px;
+    z-index: 100;
 }
 #btn {
   display: block;
