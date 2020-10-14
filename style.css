@@ -59,13 +59,7 @@ body {
     -webkit-animation: tilt-in-left-2 .5s cubic-bezier(0.950, 0.050, 0.795, 0.035) ;
 	        animation: tilt-in-left-2 .5s cubic-bezier(0.950, 0.050, 0.795, 0.035) ;
 }
-
-/**
- * ----------------------------------------
- * animation tilt-in-left-2
- * ----------------------------------------
- */
- @-webkit-keyframes tilt-in-left-2 {
+ @keyframes tilt-in-left-2 {
     0% {
       -webkit-transform: rotateX(30deg) translateX(-300px) skewX(30deg);
               transform: rotateX(30deg) translateX(-300px) skewX(30deg);
@@ -77,11 +71,10 @@ body {
       opacity: 1;
     }
   }  
-
+/* NAVIGATION BAR */
 .navbar {
     width: 100%;
     height: 100vh;
-    /* background-color: #32021eda; */
     background-color: #131313f5;
     position: fixed;
     top: 0;
@@ -173,7 +166,7 @@ body {
 .link:hover::after {
     transform: scale(1);
 }
-
+/* END OF NAVIGATION */
 header {
     width: 80%;
 }
@@ -327,6 +320,7 @@ footer {
     margin-bottom: 40px;
   }
 }
+/* ABOUT SECTION */
 .about-section {
   width: 100%;
 }
@@ -350,7 +344,7 @@ footer {
   letter-spacing: 1px;
   max-width: 900px;
 }
-
+/* SKILLS SECTION */
 .skills-section {
   width: 100%;
 }
@@ -433,3 +427,54 @@ footer {
   border-radius: 8px;
 }
 
+/* PORTFOLIO SECTION */
+
+.portfolio-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #56ADA9;
+  padding-bottom: 100px;
+}
+.portfolio-section h2 {
+  text-align: center;
+  margin: 40px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.portfolio-imgs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.portfolio-img-wrapper {
+  width: 300px;
+  height: 170px;
+  margin: 20px;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.portfolio-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .8s ease;
+}
+.portfolio-img-wrapper img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 500px) {
+  .nodisplay {
+    display: none;
+  }
+}
