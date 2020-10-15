@@ -51,3 +51,14 @@ portfolio.addEventListener('click', function() {
     portfolioSection.scrollIntoView();
     navbar.classList.toggle('change');
 })
+
+const contact = document.getElementById('contact');
+
+contact.addEventListener('click', function() {
+    secondContainer.classList.add("appear");
+    container.classList.add('block');
+    const contactSection = document.querySelector('.contact-section');
+    contactSection.scrollIntoView();
+    navbar.classList.toggle('change');
+})
+
