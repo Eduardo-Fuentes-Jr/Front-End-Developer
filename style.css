@@ -20,7 +20,7 @@ body {
 .container {
      width: 100%;
      height: 100vh;
-     background: linear-gradient(to left,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)) ,url(img/bg.png) center no-repeat;
+     background: linear-gradient(to left,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)) ,url(img/bg.png) center no-repeat;
      background-size: cover;
      position: relative;
      overflow: hidden;
@@ -132,7 +132,7 @@ body {
 }
 .link {
     text-decoration: none;
-    color:#64C1B4;
+    color:#69BA6D;
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -141,7 +141,7 @@ body {
     transition: color .5s ease;
 }
 .link:hover {
-    color:#148D8D;
+    color:#C5E0A8;
 }
 .link::before,
 .link::after {
@@ -149,7 +149,7 @@ body {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #18667A;
+    background-color: #C5E0A8;
     left: 0;
     transform: scale(0);
     transition: all .5s ease-in;
@@ -180,7 +180,6 @@ header h1 {
 #btn {
   display: block;
   padding: 20px 30px;
-  border-radius: 10px;
   border: none;
   outline: none;
   background-color:#148D8D;
@@ -280,26 +279,27 @@ footer {
   width: 500px;
 }
 .second-header h2 {
-  font-size: 22px;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   color: #fff;
-  line-height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
 }
 .description-cta-btn {
-  border: none;
-  outline: none;
   background: none;
-  font-size: 16px;
-  background: #50AE54;
-  padding: 15px 30px;
-  border-radius: 10px;
+  border:none;
+  outline: none;
+  width: 150px;
+  background-color: #131313;
+  font-size: 18px;
+  letter-spacing: 1px;
   color: #fff;
-  letter-spacing: 2px;
-  text-transform: lowercase;
+  padding: 18px 0;
   transition: all .5s ease-in;
+  cursor: pointer;
+
 }
 .description-cta-btn:hover {
   background: #69BA6D;
@@ -321,30 +321,49 @@ footer {
 /* ABOUT SECTION */
 .about-section {
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .about-description {
-  width: 100%;
-  margin: 40px auto;
+  width: 50%;
+  height: 550px;
+  background-color: #C5E0A8;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  flex-direction: column;
 }
 .about-description h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 2px;
+  margin: 50px 0;
+  text-transform: uppercase;
 }
 
 .about-description p {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  font-size-adjust: 18px;
-  line-height: 20px;
+  text-align: justify;
+  width: 70%;
+  max-width: 800px;
+  font-size: 25px;
+  line-height: 50px;
   letter-spacing: 1px;
-  max-width: 900px;
+  margin: 0 auto;
 }
+
 /* SKILLS SECTION */
 .skills-section {
-  width: 100%;
+  width: 50%;
+  height: 550px;
+}
+.skills-section h2 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
 }
 .icon-cards {
   width: 100%;
@@ -355,7 +374,7 @@ footer {
 }
 .icon-card {
   width: 200px;
-  margin: 30px 20px;
+  margin: 10px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -424,17 +443,32 @@ footer {
   background-color: rgb(210, 210, 31);
   border-radius: 8px;
 }
-
+@media screen and (max-width: 1320px) {
+  .icon-card {
+    width: 180px;
+    margin: 8px;
+  }
+}
+@media screen and (max-width: 825px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-description {
+    width: 100%;
+  }
+  .skills-section {
+    width: 100%;
+  }
+}
 .desk-bg-img {
-  background: url(img/desk.png) center no-repeat;
+  background: url(img/desk.jpg) center no-repeat;
   background-size: cover;
   width: 100%;
-  height: 80vh;
-  border-radius: 50px;
+  height: 50vh;
+  /* border-radius: 15px; */
   overflow: hidden;
-}
-.onScroll {
-  animation: shake 3s;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 /* PORTFOLIO SECTION */
 
@@ -446,11 +480,11 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
-  background-color: rgb(254, 249, 249);
+  /* background-color: rgb(254, 249, 249); */
 }
 .portfolio-section h2 {
   text-align: center;
-  margin: 40px;
+  margin-bottom: 40px;
   font-size: 22px;
   letter-spacing: 2px;
   color: #000;
@@ -480,12 +514,6 @@ footer {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 500px) {
-  .nodisplay {
-    display: none;
-  }
-}
-
 /* CONTACT SECTION */
 
 .contact-section {
@@ -495,16 +523,22 @@ footer {
   align-items: center;
   flex-direction: column;
   padding: 80px 0;
+  background-color: #C5E0A8;
+}
+.contact-section h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .form-container {
   width: 500px;
   height: auto;
-  background-color: #69BA6D;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
   padding: 50px 20px;
 }
 form {
@@ -517,14 +551,13 @@ form {
 .form-container form label {
   font-size: 24px;
   letter-spacing: 2px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-top: 15px;
 }
 .form-container form input,
 .form-container form textarea {
-  width: 80%;
+  width: 100%;
   height: 40px;
-  border-radius: 5px;
   border: none;
   outline: none;
   background: transparent;
@@ -541,7 +574,6 @@ form {
   border:none;
   outline: none;
   width: 150px;
-  border-radius: 5px;
   background-color: #131313;
   font-size: 18px;
   letter-spacing: 1px;
