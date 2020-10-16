@@ -614,7 +614,10 @@ form {
   background-color: #18667A;
 }
 
-.animate {
-  -webkit-animation: shake .5s ease;
-          animation: shake .5s ease;
+@media screen and (max-width: 500px) {
+  .form-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
+
