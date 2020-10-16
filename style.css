@@ -35,8 +35,14 @@ body {
   position: absolute;
   top: 10px;
   left: 0;
-  animation: wind 400s infinite;
+  -webkit-animation: wind 400s infinite;
+          animation: wind 400s infinite;
 
+}
+@-webkit-keyframes wind {
+  0% {transform: translateX(-50%);}
+  50% {transform: translateX(200%);}
+  100% {transform: translateX(-100%);}
 }
 @keyframes wind {
   0% {transform: translateX(-50%);}
@@ -59,15 +65,23 @@ body {
     -webkit-animation: tilt-in-left-2 .5s cubic-bezier(0.950, 0.050, 0.795, 0.035) ;
 	        animation: tilt-in-left-2 .5s cubic-bezier(0.950, 0.050, 0.795, 0.035) ;
 }
- @keyframes tilt-in-left-2 {
+ @-webkit-keyframes tilt-in-left-2 {
     0% {
-      -webkit-transform: rotateX(30deg) translateX(-300px) skewX(30deg);
-              transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+      transform: rotateX(30deg) translateX(-300px) skewX(30deg);
       opacity: 0;
     }
     100% {
-      -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
-              transform: rotateX(0deg) translateX(0) skewX(0deg);
+      transform: rotateX(0deg) translateX(0) skewX(0deg);
+      opacity: 1;
+    }
+  }
+ @keyframes tilt-in-left-2 {
+    0% {
+      transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg) translateX(0) skewX(0deg);
       opacity: 1;
     }
   }  
@@ -190,12 +204,26 @@ header h1 {
   cursor: pointer;
   transition: all .5s ease-in;
   text-transform: capitalize;
-  animation: shake .8s ease 1s;
+  -webkit-animation: shake .8s ease 1s;
+          animation: shake .8s ease 1s;
 }
 #btn:hover {
   color: #fff;
   background-color: #64C1B4;
   font-weight: 500;
+}
+@-webkit-keyframes shake {
+  0% {transform: translateX(0px);}
+  10% {transform: translateX(3px);}
+  20% {transform: translateX(-3px);}
+  30% {transform: translateX(3px);}
+  40% {transform: translateX(-3px);}
+  50% {transform: translateX(3px);}
+  60% {transform: translateX(-3px);}
+  70% {transform: translateX(3px);}
+  80% {transform: translateX(-3px);}
+  90% {transform: translateX(3px);}
+  100% {transform: translateX(0px);}
 }
 @keyframes shake {
   0% {transform: translateX(0px);}
@@ -587,5 +615,6 @@ form {
 }
 
 .animate {
-  animation: shake .5s ease;
+  -webkit-animation: shake .5s ease;
+          animation: shake .5s ease;
 }
